@@ -343,7 +343,7 @@ p {
   z-index: 2;
   display: grid;
   gap: 1rem;
-  min-height: min(680px, calc(100svh - 104px));
+  min-height: auto;
   align-items: end;
 }
 
@@ -464,20 +464,21 @@ p {
 
 .hero-panel-gallery {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 0.6rem;
+  grid-template-columns: 1fr;
+  gap: 0;
 }
 
 .hero-shot {
-  min-height: 92px;
+  aspect-ratio: 16 / 10;
   border-radius: 20px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.04);
+  background:
+    radial-gradient(circle at top, rgba(255, 180, 76, 0.14), transparent 58%),
+    rgba(20, 14, 11, 0.92);
 }
 
 .hero-shot-large {
-  grid-row: span 2;
-  min-height: 188px;
+  min-height: auto;
 }
 
 .hero-shot img,
@@ -487,27 +488,7 @@ p {
 }
 
 .hero-shot img {
-  object-fit: cover;
-  object-position: center;
-}
-
-.hero-shot-focus-top img {
-  object-position: center top;
-}
-
-.hero-shot-focus-center img {
-  object-position: center;
-}
-
-.hero-shot-contain {
-  background:
-    radial-gradient(circle at top, rgba(255, 180, 76, 0.14), transparent 58%),
-    rgba(20, 14, 11, 0.92);
-}
-
-.hero-shot-contain img {
   object-fit: contain;
-  object-position: center;
 }
 
 .experience {
@@ -579,7 +560,8 @@ p {
 }
 
 .about-visual {
-  min-height: 240px;
+  min-height: auto;
+  aspect-ratio: 16 / 10;
   border-radius: 30px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -597,7 +579,6 @@ p {
 
 .about-visual img {
   object-fit: contain;
-  object-position: center;
 }
 
 .about-stack {
@@ -658,38 +639,11 @@ p {
 
 .menu-card-image {
   width: 100%;
-  aspect-ratio: 1.32 / 1;
+  aspect-ratio: 4 / 3;
   object-fit: contain;
-  object-position: center;
   background:
     radial-gradient(circle at top, rgba(255, 180, 76, 0.12), transparent 62%),
     #18110d;
-}
-
-.menu-card[data-category="pizza"] .menu-card-image,
-.menu-card[data-category="grill"] .menu-card-image,
-.menu-card[data-category="burgeri"] .menu-card-image,
-.menu-card[data-category="crispy"] .menu-card-image {
-  object-fit: cover;
-}
-
-.menu-card[data-category="pizza"] .menu-card-image {
-  object-position: center 54%;
-}
-
-.menu-card[data-category="grill"] .menu-card-image,
-.menu-card[data-category="crispy"] .menu-card-image {
-  object-position: center 42%;
-}
-
-.menu-card[data-category="burgeri"] .menu-card-image {
-  object-position: center 46%;
-}
-
-.menu-card[data-category="bauturi"] .menu-card-image,
-.menu-card[data-category="deserturi"] .menu-card-image {
-  object-fit: contain;
-  object-position: center;
 }
 
 .menu-card-body {
@@ -749,7 +703,7 @@ p {
 
 .gallery-item {
   position: relative;
-  min-height: 148px;
+  aspect-ratio: 4 / 3;
   border-radius: 24px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -765,16 +719,7 @@ p {
 
 .gallery-item img {
   object-fit: cover;
-  object-position: center 48%;
   transition: transform 0.35s ease;
-}
-
-.gallery-item-focus-top img {
-  object-position: center 30%;
-}
-
-.gallery-item-focus-center img {
-  object-position: center;
 }
 
 .gallery-item-contain {
@@ -785,12 +730,6 @@ p {
 
 .gallery-item-contain img {
   object-fit: contain;
-  object-position: center;
-}
-
-.gallery-item-large,
-.gallery-item-tall {
-  min-height: 168px;
 }
 
 .gallery-item::before {
@@ -1050,7 +989,7 @@ p {
   }
 
   .about-visual {
-    min-height: 320px;
+    aspect-ratio: 4 / 3;
   }
 
   .about-stack {
@@ -1066,10 +1005,8 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .gallery-item,
-  .gallery-item-large,
-  .gallery-item-tall {
-    min-height: 210px;
+  .gallery-item {
+    min-height: auto;
   }
 
   .social-wrap,
@@ -1171,7 +1108,7 @@ p {
   }
 
   .hero-panel-gallery {
-    flex: 1;
+    flex: 0 0 auto;
   }
 
   .about-grid {
@@ -1179,7 +1116,7 @@ p {
   }
 
   .about-visual {
-    min-height: 420px;
+    aspect-ratio: 4 / 3;
   }
 
   .about-stack {
@@ -1193,16 +1130,6 @@ p {
 
   .gallery-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-auto-rows: 190px;
-  }
-
-  .gallery-item-large {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-
-  .gallery-item-tall {
-    grid-row: span 2;
   }
 
   .social-wrap {
