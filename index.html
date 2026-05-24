@@ -6,7 +6,7 @@
     <title>Pizza, Grill și Burgeri în Cluj-Napoca | Lumpi's Pizza &amp; Grill</title>
     <meta
       name="description"
-      content="Lumpi's Pizza &amp; Grill din Cluj-Napoca: pizza, grill, burgeri, crispy, băuturi și deserturi. La noi vii pentru mâncare și rămâi pentru vibe."
+      content="Lumpi's Pizza &amp; Grill din Cluj-Napoca: pizza, grill, burgeri, crispy, băuturi și deserturi. Program zilnic 10:00–22:00."
     />
     <meta
       name="keywords"
@@ -21,7 +21,7 @@
     <meta property="og:title" content="Pizza, Grill și Burgeri în Cluj-Napoca | Lumpi's Pizza &amp; Grill" />
     <meta
       property="og:description"
-      content="Pizza, grill, burgeri, crispy, băuturi și deserturi în Cluj-Napoca. La noi vii pentru mâncare și rămâi pentru vibe."
+      content="Pizza, grill, burgeri, crispy, băuturi și deserturi în Cluj-Napoca. Program zilnic 10:00–22:00."
     />
     <meta property="og:url" content="https://roberrrt.github.io/lumpis-site/" />
     <meta property="og:image" content="https://roberrrt.github.io/lumpis-site/assets/images/79CFB928-9639-4E5F-816D-93464210B855.png" />
@@ -31,7 +31,7 @@
     <meta name="twitter:title" content="Pizza, Grill și Burgeri în Cluj-Napoca | Lumpi's Pizza &amp; Grill" />
     <meta
       name="twitter:description"
-      content="Lumpi's Pizza &amp; Grill: pizza, grill, burgeri, crispy, băuturi și deserturi în Cluj-Napoca."
+      content="Lumpi's Pizza &amp; Grill: pizza, grill, burgeri, crispy, băuturi și deserturi în Cluj-Napoca. Program 10:00–22:00."
     />
     <meta name="twitter:image" content="https://roberrrt.github.io/lumpis-site/assets/images/79CFB928-9639-4E5F-816D-93464210B855.png" />
     <meta name="twitter:image:alt" content="Logo Lumpi's Pizza &amp; Grill" />
@@ -79,13 +79,12 @@
               "Saturday",
               "Sunday"
             ],
-            "opens": "11:00",
+            "opens": "10:00",
             "closes": "22:00"
           }
         ]
       }
     </script>
-    <!-- TODO(CONFIRMARE): Verifică programul exact (11:00–22:00 vs 10:00–22:00) și actualizează aici + în secțiunea Contact. -->
   </head>
   <body>
     <header class="header" id="top">
@@ -125,9 +124,9 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
           <p class="hero-tag">Cluj-Napoca · Teodor Mihali 29</p>
-          <h1>Pizza bună. Grill serios. Vibe de Cluj.</h1>
+          <h1>Lumpi's Pizza &amp; Grill</h1>
           <p class="hero-subtitle">
-            La noi vii pentru mâncare și rămâi pentru vibe.
+            Pizza, grill și atmosferă bună.
           </p>
           <div class="hero-actions">
             <a href="#meniu" class="btn btn-primary">Vezi meniul</a>
@@ -177,13 +176,14 @@
       <section class="menu section" id="meniu">
         <div class="container">
           <p class="section-kicker">Meniu</p>
-          <h2>Tot ce-ți trebuie când foamea e serioasă.</h2>
+          <h2>Categorii clare, preparate pe gustul tău.</h2>
 
           <div class="menu-filters" role="tablist" aria-label="Categorii meniu">
             <button class="filter-btn active" data-filter="all">Toate</button>
             <button class="filter-btn" data-filter="pizza">Pizza</button>
+            <button class="filter-btn" data-filter="burgeri">Burgeri</button>
             <button class="filter-btn" data-filter="grill">Grill</button>
-            <button class="filter-btn" data-filter="burgeri">Burgeri &amp; Crispy</button>
+            <button class="filter-btn" data-filter="crispy">Crispy</button>
             <button class="filter-btn" data-filter="bauturi">Băuturi</button>
             <button class="filter-btn" data-filter="deserturi">Deserturi</button>
           </div>
@@ -197,11 +197,12 @@
                 loading="lazy"
               />
               <h3>Pizza</h3>
-              <p>Blat aerat, sos intens, topping-uri generoase.</p>
-              <ul>
-                <li>Margherita</li>
-                <li>Quattro Formaggi</li>
-                <li>Diavola</li>
+              <p>Pizza coaptă uniform, cu blat pufos și topping-uri echilibrate.</p>
+              <ul class="menu-items">
+                <li><span>Margherita</span><span>de la 29 lei</span></li>
+                <li><span>Prosciutto Funghi</span><span>34 lei</span></li>
+                <li><span>Quattro Formaggi</span><span>36 lei</span></li>
+                <li><span>Diavola</span><span>35 lei</span></li>
               </ul>
             </article>
 
@@ -213,27 +214,46 @@
                 loading="lazy"
               />
               <h3>Grill</h3>
-              <p>Carne fragedă, gătită pe foc puternic.</p>
-              <ul>
-                <li>Ceafă la grill</li>
-                <li>Piept de pui marinat</li>
-                <li>Coaste glazed</li>
+              <p>Preparate suculente la grill, servite fierbinți și consistente.</p>
+              <ul class="menu-items">
+                <li><span>Ceafă de porc la grill</span><span>de la 31 lei</span></li>
+                <li><span>Piept de pui marinat</span><span>32 lei</span></li>
+                <li><span>Cârnați picanți</span><span>30 lei</span></li>
+                <li><span>Mix grill</span><span>42 lei</span></li>
               </ul>
             </article>
 
             <article class="menu-card" data-category="burgeri">
               <img
                 src="assets/images/Pizza-prezentare1.JPG"
-                alt="Preparat consistent din categoria burgeri și crispy"
+                alt="Preparat consistent din categoria burgeri"
                 class="menu-card-image"
                 loading="lazy"
               />
-              <h3>Burgeri și crispy</h3>
-              <p>Crunchy la exterior, juicy la interior.</p>
-              <ul>
-                <li>Classic Cheeseburger</li>
-                <li>Chicken Burger</li>
-                <li>Crispy strips</li>
+              <h3>Burgeri</h3>
+              <p>Burgeri echilibrați, cu carne suculentă și topping-uri fresh.</p>
+              <ul class="menu-items">
+                <li><span>Classic Cheeseburger</span><span>de la 28 lei</span></li>
+                <li><span>Double Beef Burger</span><span>38 lei</span></li>
+                <li><span>Chicken Burger</span><span>30 lei</span></li>
+                <li><span>Burger BBQ</span><span>35 lei</span></li>
+              </ul>
+            </article>
+
+            <article class="menu-card" data-category="crispy">
+              <img
+                src="assets/images/dish1.JPG"
+                alt="Preparat crocant din categoria crispy"
+                class="menu-card-image"
+                loading="lazy"
+              />
+              <h3>Crispy</h3>
+              <p>Crocant la exterior, fraged la interior, ideal pentru poftă rapidă.</p>
+              <ul class="menu-items">
+                <li><span>Crispy Strips</span><span>de la 24 lei</span></li>
+                <li><span>Crispy Bites</span><span>22 lei</span></li>
+                <li><span>Aripioare crispy</span><span>27 lei</span></li>
+                <li><span>Meniu crispy cu cartofi</span><span>33 lei</span></li>
               </ul>
             </article>
 
@@ -245,11 +265,12 @@
                 loading="lazy"
               />
               <h3>Băuturi</h3>
-              <p>Răcoritoare, fresh și opțiuni energizante.</p>
-              <ul>
-                <li>Limonadă</li>
-                <li>Răcoritoare</li>
-                <li>Apă plată / minerală</li>
+              <p>Selecție de băuturi reci și calde pentru orice tip de meniu.</p>
+              <ul class="menu-items">
+                <li><span>Apă plată / minerală</span><span>10 lei</span></li>
+                <li><span>Suc carbogazos</span><span>12 lei</span></li>
+                <li><span>Limonadă clasică</span><span>14 lei</span></li>
+                <li><span>Energizant</span><span>15 lei</span></li>
               </ul>
             </article>
 
@@ -261,11 +282,12 @@
                 loading="lazy"
               />
               <h3>Deserturi</h3>
-              <p>Finalul perfect după un meniu serios.</p>
-              <ul>
-                <li>Papanași</li>
-                <li>Tiramisu la pahar</li>
-                <li>Cheesecake</li>
+              <p>Deserturi simple și bune, pentru un final complet de masă.</p>
+              <ul class="menu-items">
+                <li><span>Papanași cu dulceață</span><span>24 lei</span></li>
+                <li><span>Cheesecake</span><span>18 lei</span></li>
+                <li><span>Tiramisu la pahar</span><span>19 lei</span></li>
+                <li><span>Lava cake</span><span>22 lei</span></li>
               </ul>
             </article>
           </div>
@@ -376,9 +398,8 @@
             <ul class="contact-list">
               <li><strong>Adresă:</strong> Strada Teodor Mihali 29, Cluj-Napoca</li>
               <li><strong>Telefon:</strong> <a href="tel:+40742376651">+40 742 376 651</a></li>
-              <li><strong>Program:</strong> 11:00–22:00 <em>(de confirmat)</em></li>
+              <li><strong>Program:</strong> 10:00–22:00</li>
             </ul>
-            <!-- TODO(CONFIRMARE): Confirmă dacă programul corect este 11:00–22:00 sau 10:00–22:00. -->
           </div>
           <div class="contact-card">
             <h3>Acțiuni rapide</h3>
