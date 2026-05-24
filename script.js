@@ -15,25 +15,53 @@ window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 14);
 });
 
+const closeNav = () => {
+  mainNav.classList.remove('open');
+  mainNav.setAttribute('aria-hidden', 'true');
+  navToggle.setAttribute('aria-expanded', 'false');
+};
+
 // Toggle pentru navigația mobilă.
 navToggle.addEventListener('click', () => {
   const isOpen = mainNav.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(isOpen));
+  mainNav.setAttribute('aria-hidden', String(!isOpen));
 });
 
 // Închide meniul după click pe un link.
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
+    closeNav();
   });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeNav();
+    navToggle.focus();
+  }
+});
+
+document.addEventListener('click', (event) => {
+  if (!mainNav.classList.contains('open')) {
+    return;
+  }
+
+  if (!mainNav.contains(event.target) && !navToggle.contains(event.target)) {
+    closeNav();
+  }
 });
 
 // Filtrare simplă pentru categoriile din meniu.
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    filterButtons.forEach((btn) => btn.classList.remove('active'));
+    filterButtons.forEach((btn) => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-pressed', 'false');
+    });
+
     button.classList.add('active');
+    button.setAttribute('aria-pressed', 'true');
 
     const filter = button.dataset.filter;
 
