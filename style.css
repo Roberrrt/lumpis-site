@@ -189,7 +189,7 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 2px solid rgba(255, 190, 132, 0.42);
+  border: 3px solid var(--accent-soft);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26);
 }
