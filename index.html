@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lumpi's Pizza & Grill - pizza, grill și burgeri în Cluj-Napoca. Gust intens, vibe urban, atmosferă pe care o ții minte."
+    />
+    <title>Lumpi's Pizza & Grill | Cluj-Napoca</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header" id="top">
+      <div class="container nav-wrap">
+        <a class="logo" href="#top" aria-label="Acasă Lumpi's Pizza & Grill">
+          <span class="logo-main">LUMPI'S</span>
+          <span class="logo-sub">PIZZA &amp; GRILL</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Deschide meniul" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="mainNav">
+          <a href="#despre">Despre</a>
+          <a href="#meniu">Meniu</a>
+          <a href="#galerie">Galerie</a>
+          <a href="#recenzii">Recenzii</a>
+          <a href="#social">Social</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="hero-tag">Cluj-Napoca · Teodor Mihali 29</p>
+          <h1>Pizza bună. Grill serios. Vibe de Cluj.</h1>
+          <p class="hero-subtitle">
+            La Lumpi's Pizza &amp; Grill vii pentru gust, rămâi pentru atmosferă.
+          </p>
+          <div class="hero-actions">
+            <a href="#meniu" class="btn btn-primary">Vezi meniul</a>
+            <a href="tel:+40742376651" class="btn btn-outline">Comandă acum</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="despre">
+        <div class="container about-grid">
+          <div>
+            <p class="section-kicker">Despre noi</p>
+            <h2>Locul unde focul, aluatul și energia orașului se întâlnesc.</h2>
+            <p>
+              Lumpi's Pizza &amp; Grill este punctul tău de oprire pentru pizza coaptă corect,
+              preparate grill suculente și burgeri făcuți cu chef. Servim rapid, dar fără compromis la gust.
+            </p>
+            <p>
+              Atmosfera e urbană, relaxată și mereu vie, perfectă pentru ieșiri cu prietenii,
+              pauze de prânz sau seri lungi cu poftă.
+            </p>
+          </div>
+          <div class="about-cards">
+            <article class="about-card">
+              <h3>Ingrediente fresh</h3>
+              <p>Selectate zilnic pentru gust autentic și consistență.</p>
+            </article>
+            <article class="about-card">
+              <h3>Gătit pe loc</h3>
+              <p>Pizza, grill și crispy pregătite la comandă, nu în avans.</p>
+            </article>
+            <article class="about-card">
+              <h3>Vibe local</h3>
+              <p>Design modern, muzică bună și energie de cartier.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="menu section" id="meniu">
+        <div class="container">
+          <p class="section-kicker">Meniu</p>
+          <h2>Tot ce-ți trebuie când foamea e serioasă.</h2>
+
+          <div class="menu-filters" role="tablist" aria-label="Categorii meniu">
+            <button class="filter-btn active" data-filter="all">Toate</button>
+            <button class="filter-btn" data-filter="pizza">Pizza</button>
+            <button class="filter-btn" data-filter="grill">Grill</button>
+            <button class="filter-btn" data-filter="burgeri">Burgeri &amp; Crispy</button>
+            <button class="filter-btn" data-filter="bauturi">Băuturi</button>
+            <button class="filter-btn" data-filter="deserturi">Deserturi</button>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-card" data-category="pizza">
+              <h3>Pizza</h3>
+              <p>Blat aerat, sos intens, topping-uri generoase.</p>
+              <ul>
+                <li>Margherita</li>
+                <li>Quattro Formaggi</li>
+                <li>Diavola</li>
+              </ul>
+            </article>
+
+            <article class="menu-card" data-category="grill">
+              <h3>Grill</h3>
+              <p>Carne fragedă, gătită pe foc puternic.</p>
+              <ul>
+                <li>Ceafă la grill</li>
+                <li>Piept de pui marinat</li>
+                <li>Coaste glazed</li>
+              </ul>
+            </article>
+
+            <article class="menu-card" data-category="burgeri">
+              <h3>Burgeri și crispy</h3>
+              <p>Crunchy la exterior, juicy la interior.</p>
+              <ul>
+                <li>Classic Cheeseburger</li>
+                <li>Chicken Burger</li>
+                <li>Crispy strips</li>
+              </ul>
+            </article>
+
+            <article class="menu-card" data-category="bauturi">
+              <h3>Băuturi</h3>
+              <p>Răcoritoare, fresh și opțiuni energizante.</p>
+              <ul>
+                <li>Limonadă</li>
+                <li>Răcoritoare</li>
+                <li>Apă plată / minerală</li>
+              </ul>
+            </article>
+
+            <article class="menu-card" data-category="deserturi">
+              <h3>Deserturi</h3>
+              <p>Finalul perfect după un meniu serios.</p>
+              <ul>
+                <li>Papanași</li>
+                <li>Tiramisu la pahar</li>
+                <li>Cheesecake</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="galerie">
+        <div class="container">
+          <p class="section-kicker">Galerie</p>
+          <h2>Texturi, culori, flacără. Exact cum trebuie.</h2>
+          <div class="gallery-grid">
+            <div class="gallery-item"><span>Pizza rumenă</span></div>
+            <div class="gallery-item"><span>Grill în acțiune</span></div>
+            <div class="gallery-item"><span>Burger suculent</span></div>
+            <div class="gallery-item"><span>Crispy crocant</span></div>
+            <div class="gallery-item"><span>Desert de final</span></div>
+            <div class="gallery-item"><span>Vibe de seară</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews section" id="recenzii">
+        <div class="container">
+          <p class="section-kicker">Recenzii</p>
+          <h2>Ce spun clienții noștri.</h2>
+          <div class="review-grid">
+            <article class="review-card">
+              <p>"Pizza excelentă, livrare rapidă, iar porțiile sunt chiar serioase."</p>
+              <h3>Andrei M.</h3>
+            </article>
+            <article class="review-card">
+              <p>"Grill foarte bun și atmosferă super chill. Revin constant."</p>
+              <h3>Bianca T.</h3>
+            </article>
+            <article class="review-card">
+              <p>"Burgeri top în zonă. Bun, consistent și preț corect."</p>
+              <h3>Radu C.</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="social section" id="social">
+        <div class="container social-wrap">
+          <div>
+            <p class="section-kicker">Social Media</p>
+            <h2>Urmărește-ne pentru noutăți și poftă instant.</h2>
+            <p>Vezi zilnic preparate, oferte și momente din bucătărie.</p>
+          </div>
+          <div class="social-links">
+            <a href="https://www.instagram.com/lumpis.pizza" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/share/18YaywyL3p/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.tiktok.com/@lumpis03" target="_blank" rel="noopener noreferrer">TikTok</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <p class="section-kicker">Contact</p>
+            <h2>Te așteptăm la masă sau la comandă.</h2>
+            <ul class="contact-list">
+              <li><strong>Adresă:</strong> Strada Teodor Mihali 29, Cluj-Napoca</li>
+              <li><strong>Telefon:</strong> <a href="tel:+40742376651">+40 742 376 651</a></li>
+              <li><strong>Program:</strong> 10:00–22:00</li>
+            </ul>
+          </div>
+          <div class="contact-card">
+            <h3>Comandă rapid</h3>
+            <p>Sună acum și pregătim comanda ta în cel mai scurt timp.</p>
+            <a href="tel:+40742376651" class="btn btn-primary">Sună acum</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Lumpi's Pizza &amp; Grill. Toate drepturile rezervate.</p>
+        <a href="#top">Înapoi sus</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
