@@ -494,6 +494,15 @@ p {
   margin-bottom: 1rem;
 }
 
+.contact-actions {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.contact-actions .btn {
+  width: 100%;
+}
+
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: #0c0d0f;
