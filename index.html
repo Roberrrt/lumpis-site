@@ -87,458 +87,613 @@
     </script>
   </head>
   <body>
-    <header class="header" id="top">
-      <div class="container nav-wrap">
-        <a class="logo" href="#top" aria-label="Acasă Lumpi's Pizza & Grill">
-          <picture>
-            <source srcset="assets/images/79CFB928-9639-4E5F-816D-93464210B855.webp" type="image/webp" />
-            <img
-              src="assets/images/79CFB928-9639-4E5F-816D-93464210B855.png"
-              alt="Logo Lumpi's Pizza & Grill"
-              class="logo-badge"
-              width="1254"
-              height="1254"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </picture>
-          <span class="logo-mobile-main">LUMPI'S</span>
-          <span class="logo-text">
-            <span class="logo-main">LUMPI'S</span>
-            <span class="logo-sub">PIZZA &amp; GRILL</span>
-          </span>
-        </a>
-
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          type="button"
-          aria-label="Deschide meniul"
-          aria-expanded="false"
-          aria-controls="mainNav"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="nav" id="mainNav" aria-label="Navigație principală" aria-hidden="true">
-          <a href="#despre">Despre</a>
-          <a href="#meniu">Meniu</a>
-          <a href="#galerie">Galerie</a>
-          <a href="#recenzii">Recenzii</a>
-          <a href="#social">Social</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <picture>
-          <source srcset="assets/images/pizza4.webp" type="image/webp" />
-          <img
-            src="assets/images/pizza4.jpg"
-            alt="Pizza de semnătură Lumpi's Pizza & Grill"
-            class="hero-image"
-            width="946"
-            height="1251"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </picture>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content">
-          <p class="hero-tag">Cluj-Napoca · Teodor Mihali 29</p>
-          <h1>Lumpi's Pizza &amp; Grill</h1>
-          <p class="hero-subtitle">
-            Pizza, grill și atmosferă bună.
-          </p>
-          <div class="hero-actions">
-            <a href="#meniu" class="btn btn-primary">Vezi meniul</a>
-            <a href="tel:+40742376651" class="btn btn-outline">Comandă acum</a>
+    <div class="site-shell">
+      <header class="header" id="top">
+        <div class="topbar">
+          <div class="container topbar-inner">
+            <p>Strada Teodor Mihali 29 · Cluj-Napoca · Program 10:00–22:00</p>
+            <a href="tel:+40742376651">+40 742 376 651</a>
           </div>
         </div>
-      </section>
 
-      <section class="about section" id="despre">
-        <div class="container about-grid">
-          <div>
-            <p class="section-kicker">Despre noi</p>
-            <h2>Locul unde focul, aluatul și energia orașului se întâlnesc.</h2>
-            <p>
-              Lumpi's Pizza &amp; Grill este punctul tău de oprire pentru pizza coaptă corect,
-              preparate grill suculente și burgeri făcuți cu chef. Servim rapid, dar fără compromis la gust.
-            </p>
-            <p>
-              Atmosfera e urbană, relaxată și mereu vie, perfectă pentru ieșiri cu prietenii,
-              pauze de prânz sau seri lungi cu poftă.
-            </p>
+        <div class="container nav-wrap">
+          <a class="logo" href="#top" aria-label="Acasă Lumpi's Pizza & Grill">
+            <picture>
+              <source srcset="assets/images/79CFB928-9639-4E5F-816D-93464210B855.webp" type="image/webp" />
+              <img
+                src="assets/images/79CFB928-9639-4E5F-816D-93464210B855.png"
+                alt="Logo Lumpi's Pizza & Grill"
+                class="logo-badge"
+                width="1254"
+                height="1254"
+                decoding="async"
+                fetchpriority="high"
+              />
+            </picture>
+            <span class="logo-text">
+              <span class="logo-main">LUMPI'S</span>
+              <span class="logo-sub">PIZZA &amp; GRILL</span>
+            </span>
+          </a>
+
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-label="Deschide meniul"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav class="nav" id="mainNav" aria-label="Navigație principală" aria-hidden="true">
+            <a href="#despre">Despre</a>
+            <a href="#meniu">Meniu</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#recenzii">Recenzii</a>
+            <a href="#social">Social</a>
+            <a href="#contact">Contact</a>
+            <a href="tel:+40742376651" class="nav-cta">Comandă acum</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <picture class="hero-backdrop">
+            <source srcset="assets/images/pizza4.webp" type="image/webp" />
+            <img
+              src="assets/images/pizza4.jpg"
+              alt="Pizza de semnătură Lumpi's Pizza & Grill"
+              class="hero-image"
+              width="946"
+              height="1251"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+
+          <div class="container hero-grid">
+            <div class="hero-copy reveal-sequence">
+              <p class="hero-tag">Cluj-Napoca · Teodor Mihali 29</p>
+              <h1>Lumpi's Pizza &amp; Grill</h1>
+              <p class="hero-subtitle">Pizza, grill și atmosferă bună.</p>
+
+              <div class="hero-actions">
+                <a href="#meniu" class="btn btn-primary">Vezi meniul</a>
+                <a href="tel:+40742376651" class="btn btn-secondary">Comandă acum</a>
+              </div>
+
+              <div class="hero-points">
+                <article>
+                  <strong>Pizza</strong>
+                  <span>coaptă uniform</span>
+                </article>
+                <article>
+                  <strong>Grill</strong>
+                  <span>suculent și rapid</span>
+                </article>
+                <article>
+                  <strong>Program</strong>
+                  <span>zilnic 10:00–22:00</span>
+                </article>
+              </div>
+            </div>
+
+            <aside class="hero-panel reveal">
+              <div class="hero-panel-copy">
+                <p class="section-kicker">La noi vii pentru mâncare și rămâi pentru vibe</p>
+                <p>
+                  Lumpi's Pizza &amp; Grill este punctul tău de oprire pentru pizza coaptă corect,
+                  preparate grill suculente și burgeri făcuți cu chef.
+                </p>
+              </div>
+              <div class="hero-panel-gallery">
+                <figure class="hero-shot hero-shot-large">
+                  <picture>
+                    <source srcset="assets/images/pizza-foto2.webp" type="image/webp" />
+                    <img
+                      src="assets/images/pizza-foto2.JPG"
+                      alt="Pizza cu topping-uri bogate în meniul Lumpi's"
+                      loading="eager"
+                      decoding="async"
+                      width="1724"
+                      height="2048"
+                    />
+                  </picture>
+                </figure>
+                <figure class="hero-shot">
+                  <picture>
+                    <source srcset="assets/images/drink.webp" type="image/webp" />
+                    <img
+                      src="assets/images/drink.JPG"
+                      alt="Băuturi reci servite la Lumpi's Pizza & Grill"
+                      loading="lazy"
+                      decoding="async"
+                      width="1536"
+                      height="2048"
+                    />
+                  </picture>
+                </figure>
+                <figure class="hero-shot">
+                  <picture>
+                    <source srcset="assets/images/mese2.webp" type="image/webp" />
+                    <img
+                      src="assets/images/mese2.jpg"
+                      alt="Interior Lumpi's Pizza & Grill cu mese pregătite pentru clienți"
+                      loading="lazy"
+                      decoding="async"
+                      width="2160"
+                      height="3840"
+                    />
+                  </picture>
+                </figure>
+              </div>
+            </aside>
           </div>
-          <div class="about-cards">
-            <article class="about-card">
-              <h3>Ingrediente fresh</h3>
+        </section>
+
+        <section class="experience section" aria-label="Repere rapide">
+          <div class="container experience-grid">
+            <article class="experience-card reveal">
+              <span class="experience-index">01</span>
+              <h2>Ingrediente fresh</h2>
               <p>Selectate zilnic pentru gust autentic și consistență.</p>
             </article>
-            <article class="about-card">
-              <h3>Gătit pe loc</h3>
+            <article class="experience-card reveal">
+              <span class="experience-index">02</span>
+              <h2>Gătit pe loc</h2>
               <p>Pizza, grill și crispy pregătite la comandă, nu în avans.</p>
             </article>
-            <article class="about-card">
-              <h3>Vibe local</h3>
+            <article class="experience-card reveal">
+              <span class="experience-index">03</span>
+              <h2>Vibe local</h2>
               <p>Design modern, muzică bună și energie de cartier.</p>
             </article>
           </div>
-          <figure class="about-visual">
-            <picture>
-              <source srcset="assets/images/mese2.webp" type="image/webp" />
-              <img
-                src="assets/images/mese2.jpg"
-                alt="Interior Lumpi's Pizza & Grill cu mese pregătite pentru clienți"
-                loading="lazy"
-                decoding="async"
-                width="2160"
-                height="3840"
-              />
-            </picture>
-          </figure>
-        </div>
-      </section>
+        </section>
 
-      <section class="menu section" id="meniu">
-        <div class="container">
-          <p class="section-kicker">Meniu</p>
-          <h2>Categorii clare, preparate pe gustul tău.</h2>
+        <section class="about section" id="despre">
+          <div class="container about-grid">
+            <div class="about-copy reveal">
+              <p class="section-kicker">Despre noi</p>
+              <h2>Locul unde focul, aluatul și energia orașului se întâlnesc.</h2>
+              <p>
+                Lumpi's Pizza &amp; Grill este punctul tău de oprire pentru pizza coaptă corect,
+                preparate grill suculente și burgeri făcuți cu chef. Servim rapid, dar fără compromis la gust.
+              </p>
+              <p>
+                Atmosfera e urbană, relaxată și mereu vie, perfectă pentru ieșiri cu prietenii,
+                pauze de prânz sau seri lungi cu poftă.
+              </p>
+              <div class="about-detail-strip">
+                <span>Pizza</span>
+                <span>Grill</span>
+                <span>Burgeri</span>
+                <span>Crispy</span>
+                <span>Deserturi</span>
+              </div>
+            </div>
 
-          <div class="menu-filters" aria-label="Filtre meniu">
-            <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Toate</button>
-            <button class="filter-btn" type="button" data-filter="pizza" aria-pressed="false">Pizza</button>
-            <button class="filter-btn" type="button" data-filter="burgeri" aria-pressed="false">Burgeri</button>
-            <button class="filter-btn" type="button" data-filter="grill" aria-pressed="false">Grill</button>
-            <button class="filter-btn" type="button" data-filter="crispy" aria-pressed="false">Crispy</button>
-            <button class="filter-btn" type="button" data-filter="bauturi" aria-pressed="false">Băuturi</button>
-            <button class="filter-btn" type="button" data-filter="deserturi" aria-pressed="false">Deserturi</button>
-          </div>
-
-          <div class="menu-grid">
-            <article class="menu-card" data-category="pizza">
-              <picture>
-                <source srcset="assets/images/pizza-foto2.webp" type="image/webp" />
-                <img
-                  src="assets/images/pizza-foto2.JPG"
-                  alt="Pizza cu topping-uri bogate în meniul Lumpi's"
-                  class="menu-card-image"
-                  loading="lazy"
-                  decoding="async"
-                  width="1724"
-                  height="2048"
-                />
-              </picture>
-              <h3>Pizza</h3>
-              <p>Pizza coaptă uniform, cu blat pufos și topping-uri echilibrate.</p>
-              <ul class="menu-items">
-                <li><span>Margherita</span><span>de la 29 lei</span></li>
-                <li><span>Prosciutto Funghi</span><span>34 lei</span></li>
-                <li><span>Quattro Formaggi</span><span>36 lei</span></li>
-                <li><span>Diavola</span><span>35 lei</span></li>
-              </ul>
-            </article>
-
-            <article class="menu-card" data-category="grill">
-              <picture>
-                <source srcset="assets/images/dish1.webp" type="image/webp" />
-                <img
-                  src="assets/images/dish1.JPG"
-                  alt="Preparat cald din meniul Lumpi's Pizza & Grill"
-                  class="menu-card-image"
-                  loading="lazy"
-                  decoding="async"
-                  width="1536"
-                  height="2048"
-                />
-              </picture>
-              <h3>Grill</h3>
-              <p>Preparate suculente la grill, servite fierbinți și consistente.</p>
-              <ul class="menu-items">
-                <li><span>Ceafă de porc la grill</span><span>de la 31 lei</span></li>
-                <li><span>Piept de pui marinat</span><span>32 lei</span></li>
-                <li><span>Cârnați picanți</span><span>30 lei</span></li>
-                <li><span>Mix grill</span><span>42 lei</span></li>
-              </ul>
-            </article>
-
-            <article class="menu-card" data-category="burgeri">
-              <picture>
-                <source srcset="assets/images/Pizza-prezentare1.webp" type="image/webp" />
-                <img
-                  src="assets/images/Pizza-prezentare1.JPG"
-                  alt="Preparat consistent din categoria burgeri"
-                  class="menu-card-image"
-                  loading="lazy"
-                  decoding="async"
-                  width="1536"
-                  height="2048"
-                />
-              </picture>
-              <h3>Burgeri</h3>
-              <p>Burgeri echilibrați, cu carne suculentă și topping-uri fresh.</p>
-              <ul class="menu-items">
-                <li><span>Classic Cheeseburger</span><span>de la 28 lei</span></li>
-                <li><span>Double Beef Burger</span><span>38 lei</span></li>
-                <li><span>Chicken Burger</span><span>30 lei</span></li>
-                <li><span>Burger BBQ</span><span>35 lei</span></li>
-              </ul>
-            </article>
-
-            <article class="menu-card" data-category="crispy">
-              <picture>
-                <source srcset="assets/images/dish1.webp" type="image/webp" />
-                <img
-                  src="assets/images/dish1.JPG"
-                  alt="Preparat crocant din categoria crispy"
-                  class="menu-card-image"
-                  loading="lazy"
-                  decoding="async"
-                  width="1536"
-                  height="2048"
-                />
-              </picture>
-              <h3>Crispy</h3>
-              <p>Crocant la exterior, fraged la interior, ideal pentru poftă rapidă.</p>
-              <ul class="menu-items">
-                <li><span>Crispy Strips</span><span>de la 24 lei</span></li>
-                <li><span>Crispy Bites</span><span>22 lei</span></li>
-                <li><span>Aripioare crispy</span><span>27 lei</span></li>
-                <li><span>Meniu crispy cu cartofi</span><span>33 lei</span></li>
-              </ul>
-            </article>
-
-            <article class="menu-card" data-category="bauturi">
-              <picture>
-                <source srcset="assets/images/drink.webp" type="image/webp" />
-                <img
-                  src="assets/images/drink.JPG"
-                  alt="Băuturi reci servite la Lumpi's Pizza & Grill"
-                  class="menu-card-image"
-                  loading="lazy"
-                  decoding="async"
-                  width="1536"
-                  height="2048"
-                />
-              </picture>
-              <h3>Băuturi</h3>
-              <p>Selecție de băuturi reci și calde pentru orice tip de meniu.</p>
-              <ul class="menu-items">
-                <li><span>Apă plată / minerală</span><span>10 lei</span></li>
-                <li><span>Suc carbogazos</span><span>12 lei</span></li>
-                <li><span>Limonadă clasică</span><span>14 lei</span></li>
-                <li><span>Energizant</span><span>15 lei</span></li>
-              </ul>
-            </article>
-
-            <article class="menu-card" data-category="deserturi">
-              <picture>
-                <source srcset="assets/images/drink3.webp" type="image/webp" />
-                <img
-                  src="assets/images/drink3.JPG"
-                  alt="Desert și băuturi pentru finalul mesei"
-                  class="menu-card-image"
-                  loading="lazy"
-                  decoding="async"
-                  width="1536"
-                  height="2048"
-                />
-              </picture>
-              <h3>Deserturi</h3>
-              <p>Deserturi simple și bune, pentru un final complet de masă.</p>
-              <ul class="menu-items">
-                <li><span>Papanași cu dulceață</span><span>24 lei</span></li>
-                <li><span>Cheesecake</span><span>18 lei</span></li>
-                <li><span>Tiramisu la pahar</span><span>19 lei</span></li>
-                <li><span>Lava cake</span><span>22 lei</span></li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="gallery section" id="galerie">
-        <div class="container">
-          <p class="section-kicker">Galerie</p>
-          <h2>Texturi, culori, flacără. Exact cum trebuie.</h2>
-          <div class="gallery-grid">
-            <figure class="gallery-item gallery-item-wide">
-              <picture>
-                <source srcset="assets/images/pizza-foto2.webp" type="image/webp" />
-                <img src="assets/images/pizza-foto2.JPG" alt="Pizza cu topping-uri bogate, proaspăt servită" loading="lazy" decoding="async" width="1724" height="2048" />
-              </picture>
-              <span>Pizza</span>
-            </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/Pizza-prezentare1.webp" type="image/webp" />
-                <img src="assets/images/Pizza-prezentare1.JPG" alt="Pizza scoasă din cuptor, prezentare Lumpi's" loading="lazy" decoding="async" width="1536" height="2048" />
-              </picture>
-              <span>Preparate</span>
-            </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/mese2.webp" type="image/webp" />
-                <img src="assets/images/mese2.jpg" alt="Interiorul localului Lumpi's Pizza & Grill" loading="lazy" decoding="async" width="2160" height="3840" />
-              </picture>
-              <span>Interior</span>
-            </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/drink.webp" type="image/webp" />
-                <img src="assets/images/drink.JPG" alt="Băuturi reci servite la Lumpi's Pizza & Grill" loading="lazy" decoding="async" width="1536" height="2048" />
-              </picture>
-              <span>Băuturi</span>
-            </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/foto-ppl.webp" type="image/webp" />
-                <img src="assets/images/foto-ppl.JPG" alt="Atmosferă socială în local cu clienți" loading="lazy" decoding="async" width="1536" height="2048" />
-              </picture>
-              <span>Atmosferă</span>
-            </figure>
-            <figure class="gallery-item gallery-item-tall">
-              <picture>
-                <source srcset="assets/images/drink-intro-tablo.webp" type="image/webp" />
-                <img src="assets/images/drink-intro-tablo.JPG" alt="Selecție de băuturi în stil urban" loading="lazy" decoding="async" width="1536" height="2048" />
-              </picture>
-              <span>Bar</span>
-            </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/dish1.webp" type="image/webp" />
-                <img src="assets/images/dish1.JPG" alt="Preparat cald din meniul Lumpi's Pizza & Grill" loading="lazy" decoding="async" width="1536" height="2048" />
-              </picture>
-              <span>Preparat cald</span>
-            </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/mese1.webp" type="image/webp" />
-                <img src="assets/images/mese1.JPG" alt="Mese pregătite pentru servire în local" loading="lazy" decoding="async" width="1152" height="2048" />
-              </picture>
-              <span>Mese</span>
-            </figure>
-            <figure class="gallery-item">
+            <figure class="about-visual reveal">
               <picture>
                 <source srcset="assets/images/mese3.webp" type="image/webp" />
-                <img src="assets/images/mese3.JPG" alt="Cadru interior cu atmosferă relaxată" loading="lazy" decoding="async" width="1152" height="2048" />
+                <img
+                  src="assets/images/mese3.JPG"
+                  alt="Cadru interior cu atmosferă relaxată"
+                  loading="lazy"
+                  decoding="async"
+                  width="1152"
+                  height="2048"
+                />
               </picture>
-              <span>Vibe local</span>
             </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/drink3.webp" type="image/webp" />
-                <img src="assets/images/drink3.JPG" alt="Băuturi și desert într-un cadru urban" loading="lazy" decoding="async" width="1536" height="2048" />
-              </picture>
-              <span>Pairing</span>
-            </figure>
-            <figure class="gallery-item">
-              <picture>
-                <source srcset="assets/images/pizza4.webp" type="image/webp" />
-                <img src="assets/images/pizza4.jpg" alt="Pizza rumenită uniform, crustă crocantă" loading="lazy" decoding="async" width="946" height="1251" />
-              </picture>
-              <span>Pizza de semnătură</span>
-            </figure>
-          </div>
-        </div>
-      </section>
 
-      <section class="reviews section" id="recenzii">
-        <div class="container">
-          <p class="section-kicker">Recenzii</p>
-          <h2>Ce spun clienții noștri.</h2>
-          <div class="review-grid">
-            <article class="review-card">
-              <p>"Pizza excelentă, livrare rapidă, iar porțiile sunt chiar serioase."</p>
-              <h3>Andrei M.</h3>
-            </article>
-            <article class="review-card">
-              <p>"Grill foarte bun și atmosferă super chill. Revin constant."</p>
-              <h3>Bianca T.</h3>
-            </article>
-            <article class="review-card">
-              <p>"Burgeri top în zonă. Bun, consistent și preț corect."</p>
-              <h3>Radu C.</h3>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="social section" id="social">
-        <div class="container social-wrap">
-          <div>
-            <p class="section-kicker">Social Media</p>
-            <h2>Urmărește-ne pentru noutăți și poftă instant.</h2>
-            <p>Vezi zilnic preparate, oferte și momente din bucătărie.</p>
-          </div>
-          <figure class="social-visual">
-            <picture>
-              <source srcset="assets/images/mese3.webp" type="image/webp" />
-              <img
-                src="assets/images/mese3.JPG"
-                alt="Cadru social cu atmosfera localului Lumpi's Pizza & Grill"
-                loading="lazy"
-                decoding="async"
-                width="1152"
-                height="2048"
-              />
-            </picture>
-          </figure>
-          <div class="social-links">
-            <a href="https://www.instagram.com/lumpis.pizza/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://www.facebook.com/share/18YaywyL3p/" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.tiktok.com/@lumpis03" target="_blank" rel="noopener noreferrer">TikTok</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact section" id="contact">
-        <div class="container contact-grid">
-          <div>
-            <p class="section-kicker">Contact</p>
-            <h2>Te așteptăm la masă sau la comandă.</h2>
-            <ul class="contact-list">
-              <li><strong>Adresă:</strong> Strada Teodor Mihali 29, Cluj-Napoca</li>
-              <li><strong>Telefon:</strong> <a href="tel:+40742376651">+40 742 376 651</a></li>
-              <li><strong>Program:</strong> 10:00–22:00</li>
-            </ul>
-          </div>
-          <div class="contact-card">
-            <h3>Acțiuni rapide</h3>
-            <p>Contact direct, locație, social media și comandă dintr-un click.</p>
-            <div class="contact-actions">
-              <a href="tel:+40742376651" class="btn btn-primary">Sună acum</a>
-              <a
-                href="https://www.google.com/maps/search/?api=1&query=Strada+Teodor+Mihali+29%2C+Cluj-Napoca"
-                class="btn btn-outline"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Vezi pe hartă</a
-              >
-              <a href="#social" class="btn btn-outline">Social media</a>
-              <a href="tel:+40742376651" class="btn btn-outline">Comandă</a>
+            <div class="about-stack">
+              <article class="about-card reveal">
+                <h3>Ingrediente fresh</h3>
+                <p>Selectate zilnic pentru gust autentic și consistență.</p>
+              </article>
+              <article class="about-card reveal">
+                <h3>Gătit pe loc</h3>
+                <p>Pizza, grill și crispy pregătite la comandă, nu în avans.</p>
+              </article>
+              <article class="about-card reveal">
+                <h3>Vibe local</h3>
+                <p>Design modern, muzică bună și energie de cartier.</p>
+              </article>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
 
-    <footer class="footer">
-      <div class="container footer-wrap">
-        <div class="footer-brand">
-          <picture>
-            <source srcset="assets/images/07455D77-417A-404A-9B52-D600344DC6F3.webp" type="image/webp" />
-            <img src="assets/images/07455D77-417A-404A-9B52-D600344DC6F3.png" alt="Logo Lumpi's Pizza & Grill" class="footer-badge" loading="lazy" decoding="async" width="1024" height="1024" />
-          </picture>
-          <p>&copy; <span id="year"></span> Lumpi's Pizza &amp; Grill. Toate drepturile rezervate.</p>
+        <section class="menu section" id="meniu">
+          <div class="container">
+            <div class="section-heading reveal">
+              <div>
+                <p class="section-kicker">Meniu</p>
+                <h2>Categorii clare, preparate pe gustul tău.</h2>
+              </div>
+              <p class="section-note">Alege rapid categoria și vezi direct preparatele principale.</p>
+            </div>
+
+            <div class="menu-filters" aria-label="Filtre meniu">
+              <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Toate</button>
+              <button class="filter-btn" type="button" data-filter="pizza" aria-pressed="false">Pizza</button>
+              <button class="filter-btn" type="button" data-filter="burgeri" aria-pressed="false">Burgeri</button>
+              <button class="filter-btn" type="button" data-filter="grill" aria-pressed="false">Grill</button>
+              <button class="filter-btn" type="button" data-filter="crispy" aria-pressed="false">Crispy</button>
+              <button class="filter-btn" type="button" data-filter="bauturi" aria-pressed="false">Băuturi</button>
+              <button class="filter-btn" type="button" data-filter="deserturi" aria-pressed="false">Deserturi</button>
+            </div>
+
+            <div class="menu-grid">
+              <article class="menu-card reveal" data-category="pizza">
+                <picture>
+                  <source srcset="assets/images/pizza-foto2.webp" type="image/webp" />
+                  <img
+                    src="assets/images/pizza-foto2.JPG"
+                    alt="Pizza cu topping-uri bogate în meniul Lumpi's"
+                    class="menu-card-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="1724"
+                    height="2048"
+                  />
+                </picture>
+                <div class="menu-card-body">
+                  <div class="menu-card-head">
+                    <h3>Pizza</h3>
+                    <span class="menu-chip">Popular</span>
+                  </div>
+                  <p>Pizza coaptă uniform, cu blat pufos și topping-uri echilibrate.</p>
+                  <ul class="menu-items">
+                    <li><span>Margherita</span><span>de la 29 lei</span></li>
+                    <li><span>Prosciutto Funghi</span><span>34 lei</span></li>
+                    <li><span>Quattro Formaggi</span><span>36 lei</span></li>
+                    <li><span>Diavola</span><span>35 lei</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="menu-card reveal" data-category="grill">
+                <picture>
+                  <source srcset="assets/images/dish1.webp" type="image/webp" />
+                  <img
+                    src="assets/images/dish1.JPG"
+                    alt="Preparat cald din meniul Lumpi's Pizza & Grill"
+                    class="menu-card-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="1536"
+                    height="2048"
+                  />
+                </picture>
+                <div class="menu-card-body">
+                  <div class="menu-card-head">
+                    <h3>Grill</h3>
+                    <span class="menu-chip">Hot</span>
+                  </div>
+                  <p>Preparate suculente la grill, servite fierbinți și consistente.</p>
+                  <ul class="menu-items">
+                    <li><span>Ceafă de porc la grill</span><span>de la 31 lei</span></li>
+                    <li><span>Piept de pui marinat</span><span>32 lei</span></li>
+                    <li><span>Cârnați picanți</span><span>30 lei</span></li>
+                    <li><span>Mix grill</span><span>42 lei</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="menu-card reveal" data-category="burgeri">
+                <picture>
+                  <source srcset="assets/images/Pizza-prezentare1.webp" type="image/webp" />
+                  <img
+                    src="assets/images/Pizza-prezentare1.JPG"
+                    alt="Preparat consistent din categoria burgeri"
+                    class="menu-card-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="1536"
+                    height="2048"
+                  />
+                </picture>
+                <div class="menu-card-body">
+                  <div class="menu-card-head">
+                    <h3>Burgeri</h3>
+                    <span class="menu-chip">Chef's pick</span>
+                  </div>
+                  <p>Burgeri echilibrați, cu carne suculentă și topping-uri fresh.</p>
+                  <ul class="menu-items">
+                    <li><span>Classic Cheeseburger</span><span>de la 28 lei</span></li>
+                    <li><span>Double Beef Burger</span><span>38 lei</span></li>
+                    <li><span>Chicken Burger</span><span>30 lei</span></li>
+                    <li><span>Burger BBQ</span><span>35 lei</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="menu-card reveal" data-category="crispy">
+                <picture>
+                  <source srcset="assets/images/dish1.webp" type="image/webp" />
+                  <img
+                    src="assets/images/dish1.JPG"
+                    alt="Preparat crocant din categoria crispy"
+                    class="menu-card-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="1536"
+                    height="2048"
+                  />
+                </picture>
+                <div class="menu-card-body">
+                  <div class="menu-card-head">
+                    <h3>Crispy</h3>
+                    <span class="menu-chip">Crocant</span>
+                  </div>
+                  <p>Crocant la exterior, fraged la interior, ideal pentru poftă rapidă.</p>
+                  <ul class="menu-items">
+                    <li><span>Crispy Strips</span><span>de la 24 lei</span></li>
+                    <li><span>Crispy Bites</span><span>22 lei</span></li>
+                    <li><span>Aripioare crispy</span><span>27 lei</span></li>
+                    <li><span>Meniu crispy cu cartofi</span><span>33 lei</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="menu-card reveal" data-category="bauturi">
+                <picture>
+                  <source srcset="assets/images/drink.webp" type="image/webp" />
+                  <img
+                    src="assets/images/drink.JPG"
+                    alt="Băuturi reci servite la Lumpi's Pizza & Grill"
+                    class="menu-card-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="1536"
+                    height="2048"
+                  />
+                </picture>
+                <div class="menu-card-body">
+                  <div class="menu-card-head">
+                    <h3>Băuturi</h3>
+                    <span class="menu-chip">Fresh</span>
+                  </div>
+                  <p>Selecție de băuturi reci și calde pentru orice tip de meniu.</p>
+                  <ul class="menu-items">
+                    <li><span>Apă plată / minerală</span><span>10 lei</span></li>
+                    <li><span>Suc carbogazos</span><span>12 lei</span></li>
+                    <li><span>Limonadă clasică</span><span>14 lei</span></li>
+                    <li><span>Energizant</span><span>15 lei</span></li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="menu-card reveal" data-category="deserturi">
+                <picture>
+                  <source srcset="assets/images/drink3.webp" type="image/webp" />
+                  <img
+                    src="assets/images/drink3.JPG"
+                    alt="Desert și băuturi pentru finalul mesei"
+                    class="menu-card-image"
+                    loading="lazy"
+                    decoding="async"
+                    width="1536"
+                    height="2048"
+                  />
+                </picture>
+                <div class="menu-card-body">
+                  <div class="menu-card-head">
+                    <h3>Deserturi</h3>
+                    <span class="menu-chip">Sweet</span>
+                  </div>
+                  <p>Deserturi simple și bune, pentru un final complet de masă.</p>
+                  <ul class="menu-items">
+                    <li><span>Papanași cu dulceață</span><span>24 lei</span></li>
+                    <li><span>Cheesecake</span><span>18 lei</span></li>
+                    <li><span>Tiramisu la pahar</span><span>19 lei</span></li>
+                    <li><span>Lava cake</span><span>22 lei</span></li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery section" id="galerie">
+          <div class="container">
+            <div class="section-heading reveal">
+              <div>
+                <p class="section-kicker">Galerie</p>
+                <h2>Texturi, culori, flacără. Exact cum trebuie.</h2>
+              </div>
+              <p class="section-note">O galerie fluidă, construită să meargă rapid și natural pe mobil.</p>
+            </div>
+
+            <div class="gallery-grid">
+              <figure class="gallery-item gallery-item-large reveal">
+                <picture>
+                  <source srcset="assets/images/pizza-foto2.webp" type="image/webp" />
+                  <img src="assets/images/pizza-foto2.JPG" alt="Pizza cu topping-uri bogate, proaspăt servită" loading="lazy" decoding="async" width="1724" height="2048" />
+                </picture>
+                <figcaption>Pizza</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/Pizza-prezentare1.webp" type="image/webp" />
+                  <img src="assets/images/Pizza-prezentare1.JPG" alt="Pizza scoasă din cuptor, prezentare Lumpi's" loading="lazy" decoding="async" width="1536" height="2048" />
+                </picture>
+                <figcaption>Preparate</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/mese2.webp" type="image/webp" />
+                  <img src="assets/images/mese2.jpg" alt="Interiorul localului Lumpi's Pizza & Grill" loading="lazy" decoding="async" width="2160" height="3840" />
+                </picture>
+                <figcaption>Interior</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/drink.webp" type="image/webp" />
+                  <img src="assets/images/drink.JPG" alt="Băuturi reci servite la Lumpi's Pizza & Grill" loading="lazy" decoding="async" width="1536" height="2048" />
+                </picture>
+                <figcaption>Băuturi</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/foto-ppl.webp" type="image/webp" />
+                  <img src="assets/images/foto-ppl.JPG" alt="Atmosferă socială în local cu clienți" loading="lazy" decoding="async" width="1536" height="2048" />
+                </picture>
+                <figcaption>Atmosferă</figcaption>
+              </figure>
+              <figure class="gallery-item gallery-item-tall reveal">
+                <picture>
+                  <source srcset="assets/images/drink-intro-tablo.webp" type="image/webp" />
+                  <img src="assets/images/drink-intro-tablo.JPG" alt="Selecție de băuturi în stil urban" loading="lazy" decoding="async" width="1536" height="2048" />
+                </picture>
+                <figcaption>Bar</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/dish1.webp" type="image/webp" />
+                  <img src="assets/images/dish1.JPG" alt="Preparat cald din meniul Lumpi's Pizza & Grill" loading="lazy" decoding="async" width="1536" height="2048" />
+                </picture>
+                <figcaption>Preparat cald</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/mese1.webp" type="image/webp" />
+                  <img src="assets/images/mese1.JPG" alt="Mese pregătite pentru servire în local" loading="lazy" decoding="async" width="1152" height="2048" />
+                </picture>
+                <figcaption>Mese</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/mese3.webp" type="image/webp" />
+                  <img src="assets/images/mese3.JPG" alt="Cadru interior cu atmosferă relaxată" loading="lazy" decoding="async" width="1152" height="2048" />
+                </picture>
+                <figcaption>Vibe local</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/drink3.webp" type="image/webp" />
+                  <img src="assets/images/drink3.JPG" alt="Băuturi și desert într-un cadru urban" loading="lazy" decoding="async" width="1536" height="2048" />
+                </picture>
+                <figcaption>Pairing</figcaption>
+              </figure>
+              <figure class="gallery-item reveal">
+                <picture>
+                  <source srcset="assets/images/pizza4.webp" type="image/webp" />
+                  <img src="assets/images/pizza4.jpg" alt="Pizza rumenită uniform, crustă crocantă" loading="lazy" decoding="async" width="946" height="1251" />
+                </picture>
+                <figcaption>Pizza de semnătură</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="reviews section" id="recenzii">
+          <div class="container">
+            <div class="section-heading reveal">
+              <div>
+                <p class="section-kicker">Recenzii</p>
+                <h2>Ce spun clienții noștri.</h2>
+              </div>
+            </div>
+            <div class="review-grid">
+              <article class="review-card reveal">
+                <p>"Pizza excelentă, livrare rapidă, iar porțiile sunt chiar serioase."</p>
+                <h3>Andrei M.</h3>
+              </article>
+              <article class="review-card reveal">
+                <p>"Grill foarte bun și atmosferă super chill. Revin constant."</p>
+                <h3>Bianca T.</h3>
+              </article>
+              <article class="review-card reveal">
+                <p>"Burgeri top în zonă. Bun, consistent și preț corect."</p>
+                <h3>Radu C.</h3>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="social section" id="social">
+          <div class="container social-wrap reveal">
+            <div class="social-copy">
+              <p class="section-kicker">Social Media</p>
+              <h2>Urmărește-ne pentru noutăți și poftă instant.</h2>
+              <p>Vezi zilnic preparate, oferte și momente din bucătărie.</p>
+              <div class="social-links">
+                <a href="https://www.instagram.com/lumpis.pizza/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.facebook.com/share/18YaywyL3p/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a href="https://www.tiktok.com/@lumpis03" target="_blank" rel="noopener noreferrer">TikTok</a>
+              </div>
+            </div>
+            <figure class="social-visual">
+              <picture>
+                <source srcset="assets/images/mese3.webp" type="image/webp" />
+                <img
+                  src="assets/images/mese3.JPG"
+                  alt="Cadru social cu atmosfera localului Lumpi's Pizza & Grill"
+                  loading="lazy"
+                  decoding="async"
+                  width="1152"
+                  height="2048"
+                />
+              </picture>
+            </figure>
+          </div>
+        </section>
+
+        <section class="contact section" id="contact">
+          <div class="container contact-grid">
+            <div class="contact-copy reveal">
+              <p class="section-kicker">Contact</p>
+              <h2>Te așteptăm la masă sau la comandă.</h2>
+              <ul class="contact-list">
+                <li><strong>Adresă:</strong> Strada Teodor Mihali 29, Cluj-Napoca</li>
+                <li><strong>Telefon:</strong> <a href="tel:+40742376651">+40 742 376 651</a></li>
+                <li><strong>Program:</strong> 10:00–22:00</li>
+              </ul>
+            </div>
+
+            <div class="contact-card reveal">
+              <h3>Acțiuni rapide</h3>
+              <p>Contact direct, locație, social media și comandă dintr-un click.</p>
+              <div class="contact-actions">
+                <a href="tel:+40742376651" class="btn btn-primary">Sună acum</a>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Strada+Teodor+Mihali+29%2C+Cluj-Napoca"
+                  class="btn btn-secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Vezi pe hartă</a
+                >
+                <a href="#social" class="btn btn-ghost">Social media</a>
+                <a href="tel:+40742376651" class="btn btn-ghost">Comandă</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer-wrap">
+          <div class="footer-brand">
+            <picture>
+              <source srcset="assets/images/07455D77-417A-404A-9B52-D600344DC6F3.webp" type="image/webp" />
+              <img src="assets/images/07455D77-417A-404A-9B52-D600344DC6F3.png" alt="Logo Lumpi's Pizza & Grill" class="footer-badge" loading="lazy" decoding="async" width="1024" height="1024" />
+            </picture>
+            <div>
+              <p>Lumpi's Pizza &amp; Grill</p>
+              <small>&copy; <span id="year"></span> Lumpi's Pizza &amp; Grill. Toate drepturile rezervate.</small>
+            </div>
+          </div>
+          <a class="footer-link" href="#top">Înapoi sus</a>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <script src="script.js"></script>
   </body>

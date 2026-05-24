@@ -1,3 +1,4 @@
+const body = document.body;
 const header = document.querySelector('.header');
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
@@ -5,30 +6,41 @@ const navLinks = document.querySelectorAll('.nav a');
 const yearEl = document.getElementById('year');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const menuCards = document.querySelectorAll('.menu-card');
-const revealTargets = document.querySelectorAll('.section, .menu-card, .gallery-item, .review-card');
+const revealTargets = document.querySelectorAll('.reveal');
 
-// Setează anul curent în footer.
-yearEl.textContent = new Date().getFullYear();
-
-// Schimbă subtil headerul după scroll pentru contrast mai bun.
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 14);
-});
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
 const closeNav = () => {
+  if (!mainNav || !navToggle) {
+    return;
+  }
+
   mainNav.classList.remove('open');
   mainNav.setAttribute('aria-hidden', 'true');
   navToggle.setAttribute('aria-expanded', 'false');
+  body.classList.remove('nav-open');
 };
 
-// Toggle pentru navigația mobilă.
-navToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', String(isOpen));
-  mainNav.setAttribute('aria-hidden', String(!isOpen));
-});
+if (header) {
+  const syncHeaderState = () => {
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  };
 
-// Închide meniul după click pe un link.
+  syncHeaderState();
+  window.addEventListener('scroll', syncHeaderState, { passive: true });
+}
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    mainNav.setAttribute('aria-hidden', String(!isOpen));
+    body.classList.toggle('nav-open', isOpen);
+  });
+}
+
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     closeNav();
@@ -38,12 +50,11 @@ navLinks.forEach((link) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     closeNav();
-    navToggle.focus();
   }
 });
 
 document.addEventListener('click', (event) => {
-  if (!mainNav.classList.contains('open')) {
+  if (!mainNav || !navToggle || !mainNav.classList.contains('open')) {
     return;
   }
 
@@ -52,7 +63,12 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// Filtrare simplă pentru categoriile din meniu.
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 980) {
+    closeNav();
+  }
+});
+
 filterButtons.forEach((button) => {
   button.addEventListener('click', () => {
     filterButtons.forEach((btn) => {
@@ -63,30 +79,39 @@ filterButtons.forEach((button) => {
     button.classList.add('active');
     button.setAttribute('aria-pressed', 'true');
 
-    const filter = button.dataset.filter;
+    const activeFilter = button.dataset.filter;
 
     menuCards.forEach((card) => {
       const category = card.dataset.category;
-      const shouldShow = filter === 'all' || category === filter;
-      card.classList.toggle('hidden', !shouldShow);
+      const isVisible = activeFilter === 'all' || category === activeFilter;
+      card.classList.toggle('hidden', !isVisible);
     });
   });
 });
 
-// Animații discrete la apariția secțiunilor în viewport.
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-revealTargets.forEach((item) => {
-  item.classList.add('reveal');
-  revealObserver.observe(item);
-});
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.16,
+      rootMargin: '0px 0px -8% 0px',
+    }
+  );
+
+  revealTargets.forEach((target) => {
+    revealObserver.observe(target);
+  });
+} else {
+  revealTargets.forEach((target) => {
+    target.classList.add('visible');
+  });
+}
