@@ -113,6 +113,10 @@ p {
   flex-direction: column;
 }
 
+.logo-mobile-main {
+  display: none;
+}
+
 .logo-badge {
   width: 48px;
   height: 48px;
@@ -545,7 +549,7 @@ p {
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   background: #0c0d0f;
-  padding: 1.1rem 0;
+  padding: 1.1rem 0 calc(1.1rem + env(safe-area-inset-bottom, 0px));
 }
 
 .footer-wrap {
@@ -709,6 +713,60 @@ p {
 }
 
 @media (max-width: 767px) {
+  .nav-wrap {
+    min-height: 78px;
+  }
+
+  .logo {
+    min-height: 44px;
+    gap: 0;
+    align-items: center;
+  }
+
+  .logo-badge,
+  .logo-text {
+    display: none;
+  }
+
+  .logo-mobile-main {
+    display: inline-block;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(1.18rem, 4.8vw, 1.45rem);
+    letter-spacing: 0.035em;
+    line-height: 1;
+    color: var(--text);
+    white-space: nowrap;
+  }
+
+  .nav-toggle {
+    width: 44px;
+    height: 38px;
+  }
+
+  .footer {
+    padding: 1.2rem 0 calc(1.8rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .footer-wrap {
+    gap: 0.55rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .footer-badge {
+    display: none;
+  }
+
+  .footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
   .hero {
     min-height: 80vh;
   }
