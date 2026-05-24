@@ -224,7 +224,19 @@ p {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 4.2rem 0 3.3rem;
+  padding: 3.6rem 0 3.3rem;
+  max-width: 40rem;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  inset: -1rem -1rem -1.1rem -1rem;
+  background: linear-gradient(140deg, rgba(10, 10, 12, 0.82), rgba(10, 10, 12, 0.55));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  backdrop-filter: blur(2px);
+  z-index: -1;
 }
 
 .hero-tag {
@@ -248,9 +260,9 @@ p {
 .hero-subtitle {
   max-width: 48ch;
   font-size: clamp(1.08rem, 2.8vw, 1.3rem);
-  color: #eef0f5;
-  font-weight: 600;
-  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.9);
   margin-bottom: 1.6rem;
 }
 
@@ -383,22 +395,27 @@ p {
 
 .menu-items li {
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding-bottom: 0.35rem;
+  gap: 1rem;
+  padding-bottom: 0.45rem;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
 }
 
 .menu-items li span:first-child {
   color: #f8f8fb;
   font-weight: 600;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .menu-items li span:last-child {
   color: var(--yellow);
   font-weight: 700;
   white-space: nowrap;
+  flex: 0 0 auto;
+  margin-left: 1rem;
+  text-align: right;
 }
 
 .menu-card.hidden {
@@ -688,5 +705,53 @@ p {
   .footer-badge {
     width: 42px;
     height: 42px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-content {
+    padding: 2.7rem 0 2.6rem;
+    max-width: 33rem;
+  }
+
+  .hero-content::before {
+    inset: -0.8rem -0.7rem -0.9rem -0.7rem;
+    background: linear-gradient(145deg, rgba(8, 8, 10, 0.88), rgba(8, 8, 10, 0.62));
+  }
+
+  .hero h1 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4.4vw, 1.13rem);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-actions {
+    gap: 0.55rem;
+  }
+
+  .hero-actions .btn {
+    padding: 0.62rem 0.95rem;
+    font-size: 0.93rem;
+  }
+
+  .menu-card {
+    padding: 1.05rem;
+  }
+
+  .menu-items li {
+    gap: 1.2rem;
+    padding-bottom: 0.52rem;
+  }
+
+  .menu-items li span:last-child {
+    margin-left: 1.2rem;
   }
 }
