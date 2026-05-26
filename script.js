@@ -2,7 +2,7 @@ const body = document.body;
 const header = document.querySelector('.header');
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
-const navLinks = document.querySelectorAll('.nav a:not([href^="tel:"])');
+const navLinks = document.querySelectorAll('.nav a[href^="#"]');
 const yearEl = document.getElementById('year');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const menuCards = document.querySelectorAll('.menu-card');
@@ -63,6 +63,10 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.addEventListener('click', (event) => {
+  if (event.target instanceof Element && event.target.closest('a[href^="tel:"]')) {
+    return;
+  }
+
   if (!mainNav || !navToggle || !mainNav.classList.contains('open')) {
     return;
   }
