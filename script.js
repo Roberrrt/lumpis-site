@@ -4,6 +4,7 @@ const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
 const navBackdrop = document.getElementById('navBackdrop');
 const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+const samePageHashLinks = document.querySelectorAll('a[href^="#"]');
 const yearEl = document.getElementById('year');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const menuCards = document.querySelectorAll('.menu-card');
@@ -54,6 +55,26 @@ if (navToggle && mainNav && navBackdrop) {
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
     closeNav();
+  });
+});
+
+samePageHashLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const targetId = link.getAttribute('href');
+
+    if (!targetId || targetId === '#') {
+      return;
+    }
+
+    const target = document.querySelector(targetId);
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.history.replaceState(null, '', targetId);
   });
 });
 
