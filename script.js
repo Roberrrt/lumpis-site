@@ -2,7 +2,7 @@ const body = document.body;
 const header = document.querySelector('.header');
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
-const navLinks = document.querySelectorAll('.nav a');
+const navLinks = document.querySelectorAll('.nav a:not([href^="tel:"])');
 const yearEl = document.getElementById('year');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const menuCards = document.querySelectorAll('.menu-card');
@@ -48,10 +48,6 @@ if (navToggle && mainNav) {
 
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    if (link.matches('[href^="tel:"]')) {
-      return;
-    }
-
     closeNav();
   });
 });
