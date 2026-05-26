@@ -13,6 +13,7 @@ const lightboxTriggers = document.querySelectorAll('[data-lightbox]');
 const lightbox = document.getElementById('imageLightbox');
 const lightboxImage = lightbox?.querySelector('.lightbox-image');
 const lightboxCloseTargets = lightbox?.querySelectorAll('[data-lightbox-close]');
+const backToTopButton = document.getElementById('backToTop');
 let lastLightboxTrigger = null;
 
 if (yearEl) {
@@ -38,6 +39,23 @@ if (header) {
 
   syncHeaderState();
   window.addEventListener('scroll', syncHeaderState, { passive: true });
+}
+
+if (backToTopButton) {
+  const syncBackToTopButton = () => {
+    const isVisible = window.scrollY > 240;
+    backToTopButton.classList.toggle('is-visible', isVisible);
+    backToTopButton.setAttribute('aria-hidden', String(!isVisible));
+    backToTopButton.tabIndex = isVisible ? 0 : -1;
+  };
+
+  syncBackToTopButton();
+  window.addEventListener('scroll', syncBackToTopButton, { passive: true });
+
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.history.replaceState(null, '', '#top');
+  });
 }
 
 if (navToggle && mainNav && navBackdrop) {
