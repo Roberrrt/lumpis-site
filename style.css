@@ -317,6 +317,7 @@ p {
   top: 79px;
   left: 16px;
   right: 16px;
+  z-index: 1;
   padding: 1rem;
   display: grid;
   gap: 0.45rem;
@@ -329,6 +330,28 @@ p {
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+}
+
+.nav-backdrop {
+  position: fixed;
+  top: 79px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(4, 3, 2, 0.38);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.nav-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .nav.open {
@@ -1272,6 +1295,10 @@ p {
   }
 
   .nav-toggle {
+    display: none;
+  }
+
+  .nav-backdrop {
     display: none;
   }
 

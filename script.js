@@ -2,6 +2,7 @@ const body = document.body;
 const header = document.querySelector('.header');
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
+const navBackdrop = document.getElementById('navBackdrop');
 const navLinks = document.querySelectorAll('.nav a[href^="#"]');
 const yearEl = document.getElementById('year');
 const filterButtons = document.querySelectorAll('.filter-btn');
@@ -18,11 +19,12 @@ if (yearEl) {
 }
 
 const closeNav = () => {
-  if (!mainNav || !navToggle) {
+  if (!mainNav || !navToggle || !navBackdrop) {
     return;
   }
 
   mainNav.classList.remove('open');
+  navBackdrop.classList.remove('open');
   mainNav.setAttribute('aria-hidden', 'true');
   navToggle.setAttribute('aria-expanded', 'false');
   body.classList.remove('nav-open');
@@ -37,13 +39,16 @@ if (header) {
   window.addEventListener('scroll', syncHeaderState, { passive: true });
 }
 
-if (navToggle && mainNav) {
+if (navToggle && mainNav && navBackdrop) {
   navToggle.addEventListener('click', () => {
     const isOpen = mainNav.classList.toggle('open');
+    navBackdrop.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
     mainNav.setAttribute('aria-hidden', String(!isOpen));
     body.classList.toggle('nav-open', isOpen);
   });
+
+  navBackdrop.addEventListener('click', closeNav);
 }
 
 navLinks.forEach((link) => {
@@ -59,20 +64,6 @@ document.addEventListener('keydown', (event) => {
     if (lightbox?.classList.contains('is-open')) {
       closeLightbox();
     }
-  }
-});
-
-document.addEventListener('click', (event) => {
-  if (event.target instanceof Element && event.target.closest('a[href^="tel:"]')) {
-    return;
-  }
-
-  if (!mainNav || !navToggle || !mainNav.classList.contains('open')) {
-    return;
-  }
-
-  if (!mainNav.contains(event.target) && !navToggle.contains(event.target)) {
-    closeNav();
   }
 });
 
