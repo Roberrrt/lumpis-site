@@ -994,43 +994,6 @@ p {
   color: var(--accent-soft);
 }
 
-.company-details {
-  margin-top: 1rem;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.03);
-}
-
-.company-details-title,
-.footer-meta-title {
-  margin: 0 0 0.75rem;
-  color: #fff8f1;
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.company-details-list,
-.footer-meta-list {
-  list-style: none;
-  display: grid;
-  gap: 0.45rem;
-  margin: 0;
-  padding: 0;
-}
-
-.company-details-list strong,
-.footer-meta-list strong {
-  color: #fff;
-}
-
-.company-details-list a,
-.footer-meta-list a {
-  color: var(--accent-soft);
-}
-
 .contact-card p {
   margin-top: 0.45rem;
 }
@@ -1166,15 +1129,13 @@ p {
   gap: 0.85rem 1.25rem;
 }
 
-.footer-meta {
-  grid-column: 1 / -1;
-  padding-top: 0.25rem;
-  border-top: 1px solid rgba(255, 233, 210, 0.08);
-}
-
 .footer-link {
   color: var(--accent-soft);
   font-weight: 800;
+}
+
+.footer-link-subtle {
+  opacity: 0.82;
 }
 
 .reveal {
@@ -1323,10 +1284,6 @@ p {
     justify-self: end;
   }
 
-  .footer-meta-list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.5rem;
-  }
 }
 
 @media (max-width: 719px) {
@@ -1353,10 +1310,6 @@ p {
 
   .footer-links {
     justify-content: flex-start;
-  }
-
-  .footer-meta-list {
-    grid-template-columns: 1fr;
   }
 
   .lightbox {
@@ -1512,9 +1465,4 @@ p {
     grid-template-columns: 0.9fr 1.1fr;
   }
 
-  .company-details-list,
-  .footer-meta-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    column-gap: 1rem;
-  }
 }
